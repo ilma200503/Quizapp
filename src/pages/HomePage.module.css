@@ -1,0 +1,60 @@
+/* Main container */
+.container {
+  background-color: #1a2a3a;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #2e4a6a;
+}
+
+/* Subtitle */
+.subtitle {
+  color: #aac4e0;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Each form field */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Error message */
+.error {
+  background-color: #3a1a1a;
+  color: #e94560;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #e94560;
+  font-size: 0.9rem;
+}
+
+/* Submit button */
+.button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  background-color: #e94560;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.button:hover {
+  background-color: #c73652;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+}
