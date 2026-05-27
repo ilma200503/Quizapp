@@ -1,1 +1,12 @@
-function Navbar() { return <nav>Navbar</nav> } export default Navbar
+import { NavLink } from 'react-router-dom'
+
+function Navbar() {
+  return (
+    <nav>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/highscore">Highscore</NavLink>
+    </nav>
+  )
+}
+
+export default Navbar
