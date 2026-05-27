@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import HighscoreEntry from '../components/HighscoreEntry'
+import styles from './HighscorePage.module.css'
 
 function HighscorePage() {
   const [scores, setScores] = useState([])
 
-  // Ladda scores från localstorage när sidan laddas 
+  // ladda rekord med localstorage när sidan laddas
   useEffect(() => {
     const saved = localStorage.getItem('highscores')
     if (saved) {
@@ -12,7 +13,7 @@ function HighscorePage() {
     }
   }, [])
 
-  // Ta bort score med index 
+  // Ta bort en rekord med index
   function handleDelete(index) {
     const updated = scores.filter((_, i) => i !== index)
     setScores(updated)
@@ -22,20 +23,21 @@ function HighscorePage() {
   return (
     <main>
       <h1>Highscore</h1>
-
-      {scores.length === 0 ? (
-        <p>No highscores yet. Play a quiz to get started!</p>
-      ) : (
-        <ul>
-          {scores.map((entry, index) => (
-            <HighscoreEntry
-              key={index}
-              entry={entry}
-              onDelete={() => handleDelete(index)}
-            />
-          ))}
-        </ul>
-      )}
+      <div className={styles.container}>
+        {scores.length === 0 ? (
+          <p className={styles.empty}>No highscores yet. Play a quiz to get started!</p>
+        ) : (
+          <ul className={styles.list}>
+            {scores.map((entry, index) => (
+              <HighscoreEntry
+                key={index}
+                entry={entry}
+                onDelete={() => handleDelete(index)}
+              />
+            ))}
+          </ul>
+        )}
+      </div>
     </main>
   )
 }

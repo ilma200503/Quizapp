@@ -1,0 +1,75 @@
+/* Main container */
+.container {
+  background-color: #1a2a3a;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #2e4a6a;
+}
+
+/* tomt meddelande */
+.empty {
+  color: #aac4e0;
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Lista */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Varje rad */
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d1b2a;
+  border: 1px solid #2e4a6a;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+}
+
+/* Name */
+.name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+/* Score */
+.score {
+  color: #aac4e0;
+  font-size: 0.95rem;
+}
+
+/* Delete button */
+.deleteButton {
+  background-color: transparent;
+  color: #e94560;
+  border: 1px solid #e94560;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.deleteButton:hover {
+  background-color: #e94560;
+  color: #fff;
+}
+
+/* Responsiv */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  .entry {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
