@@ -1,1 +1,9 @@
-function ResultsPage() { return <div>Results Page</div> } export default ResultsPage
+function ResultsPage() { 
+    return (
+    <main>
+        <h1>Results</h1>
+        <p>Here are your results!</p>
+    </main>)
+}  
+    
+export default ResultsPage
