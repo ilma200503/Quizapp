@@ -1,12 +1,19 @@
 .question-card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px 0;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
+/* The question text styling */
+.question-card h2 {
+  font-size: 1.4rem;
+  color: #f0f0f0;
+  line-height: 1.4;
+}
+
+/* Container creating a neat gap between the answer buttons */
 .answers-container {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
