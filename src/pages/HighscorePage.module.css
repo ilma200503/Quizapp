@@ -6,7 +6,7 @@
   border: 1px solid #2e4a6a;
 }
 
-/* tomt meddelande */
+/* empty message */
 .empty {
   color: #aac4e0;
   font-size: 1rem;
@@ -14,7 +14,7 @@
   padding: 2rem 0;
 }
 
-/* Lista */
+/* list */
 .list {
   list-style: none;
   display: flex;
@@ -22,7 +22,7 @@
   gap: 0.8rem;
 }
 
-/* Varje rad */
+
 .entry {
   display: flex;
   justify-content: space-between;
@@ -61,7 +61,7 @@
   color: #fff;
 }
 
-/* Responsiv */
+/* Responsive */
 @media (max-width: 600px) {
   .container {
     padding: 1.2rem;
