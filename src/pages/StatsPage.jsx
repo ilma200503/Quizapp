@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import StatCard from "../components/StatCard";
+import StatCard from "../components/StatsCard";
 import PerformanceChart from "../components/PerformanceChart";
 import "./StatsPage.css";
 
