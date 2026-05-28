@@ -3,19 +3,24 @@ import styles from './ResultsPage.module.css'
 
 
 function ResultsPage() { 
+    // define location and navigate hooks to get the score and total from the quiz page and navigate back to the quiz page
     const location = useLocation()
     const navigate = useNavigate()
-    const { score, total } = location.state || { score: 25, total: 100 } // default values if no state is passed
+    const { score, total } = location.state || {}
     
+    // calculate the percentage score
     const percentage = Math.round((score / total) * 100)
     //return the results page 
     return (
     <main>
-        <h1 className={styles.test}>Results</h1>
-        <div>
-            <p>Here are your results!</p>
-            <p>You scored {score} out of {total}.</p>
-            <p>{percentage}%</p>
+        <h1>Results</h1>
+        <div className={styles.container}>
+            <p className={styles.resultText}>Here are your results!</p>
+            <p className={styles.resultText}>You scored {score} out of {total}.</p>
+            <p className={styles.resultText}>That gives you a total of {percentage}% accuracy.</p>
+            <div className={styles.buttonContainer}>
+                <button onClick={() => navigate('/')}>Take Quiz Again</button>
+            </div>
         </div>
     </main>)
 }  
