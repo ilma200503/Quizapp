@@ -1,38 +1,44 @@
+/* Base style for the answer buttons, matching input/select fields */
 .answer-btn {
-  display: block;
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #0d1b2a; /* Dark background matching global body */
+  color: #f0f0f0;
+  border: 1px solid #2e4a6a;
+  border-radius: 8px;
   transition: all 0.2s ease;
-  background-color: white;
-  color: #333;
 }
 
+/* Hover effect BEFORE an answer is selected */
 .answer-btn:not(:disabled):hover {
-  background-color: #f0f0f0;
-  cursor: pointer;
+  border-color: #e94560; /* Lights up in accent red on hover */
+  background-color: #1a2a3a;
 }
 
+/* STATE: Correct answer (Turns emerald green) */
+.correct {
+  background-color: #1b4d3e !important;
+  border-color: #2ecc71 !important;
+  color: #2ecc71 !important;
+  font-weight: bold;
+}
+
+/* STATE: Selected incorrect answer (Turns dark red, matches global error style) */
+.incorrect {
+  background-color: #3a1a1a !important;
+  border-color: #e94560 !important;
+  color: #e94560 !important;
+}
+
+/* STATE: Faded out (The other incorrect answers get transparency) */
+.fade {
+  opacity: 0.4;
+  border-color: #2e4a6a;
+}
+
+/* Disable cursor change when locked */
 .answer-btn:disabled {
   cursor: not-allowed;
-}
-
-/* Dynamiska klasser som vi lägger på via JS */
-.answer-btn.correct {
-  background-color: #4CAF50 !important;
-  color: white;
-  border-color: #4CAF50;
-}
-
-.answer-btn.incorrect {
-  background-color: #f44336 !important;
-  color: white;
-  border-color: #f44336;
-}
-
-.answer-btn.fade {
-  opacity: 0.6;
 }
