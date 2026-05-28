@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import HighscoreEntry from '../components/HighscoreEntry'
+import HighscoreEntry from '../components/HighScoreEntry'
 import styles from './HighscorePage.module.css'
 
 function HighscorePage() {

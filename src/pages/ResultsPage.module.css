@@ -1,0 +1,30 @@
+
+/* set container styles */ 
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #1a2a3a;
+    border-radius: 12px;
+    border: 1px solid #2e4a6a;
+}
+
+/* set result text styles */
+.resulttext {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* align buttons */
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+}
