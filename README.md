@@ -8,10 +8,10 @@ En quiz-applikation byggd med React och Vite som hämtar frågor från Open Triv
 
 | Person | Ansvar |
 |--------|--------|
-| CG | ResultsPage – visar slutpoäng och sparar resultat till localStorage |
+| Carl-Gunnar | ResultsPage – visar slutpoäng och sparar resultat till localStorage |
 | Elsa | QuizPage – hämtar frågor från API och hanterar quiz-flödet |
 | Ilma | HomePage, App.jsx, routing och komponentstruktur |
-| Denis | HighscorePage, CSS och design |
+| Deniz | HighscorePage, CSS och design |
 | Marcus | StatsPage, PerformanceChart och StatCard |
 
 ---
