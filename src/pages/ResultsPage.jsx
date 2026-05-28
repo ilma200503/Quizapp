@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import styles from './ResultsPage.module.css'
 
 
@@ -7,6 +8,19 @@ function ResultsPage() {
     const location = useLocation()
     const navigate = useNavigate()
     const { score, total } = location.state || {}
+
+    useEffect(() => {
+  if (score === undefined || total === undefined) return;
+
+  const nyPost = {
+    score: score,
+    total: total,
+    date: new Date().toISOString()
+  };
+
+  const befintliga = JSON.parse(localStorage.getItem("highscores") || "[]");
+  localStorage.setItem("highscores", JSON.stringify([...befintliga, nyPost]));
+}, []);
     
     // calculate the percentage score
     const percentage = Math.round((score / total) * 100)
