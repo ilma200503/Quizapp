@@ -1,17 +1,22 @@
-// HomePage handles quiz settings and navigation to quiz
+// HomePage - handles quiz settings form and navigation to quiz
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './HomePage.module.css'
 
 function HomePage() {
+    // State for each form field
   const [category, setCategory] = useState('')
   const [difficulty, setDifficulty] = useState('easy')
   const [amount, setAmount] = useState(10)
+   // State for validation error message
   const [error, setError] = useState('')
+   // useNavigate hook to redirect user to quiz page
   const navigate = useNavigate()
 
+  // Handles form submission and validates category selection
   function handleSubmit(e) {
     e.preventDefault()
+     // Show error if no category is selected
     if (!category) {
       setError('Please select a category before starting.')
       return
